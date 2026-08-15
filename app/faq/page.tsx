@@ -6,13 +6,14 @@ import {
   PageHero,
 } from "../components/GuideElements";
 import { faqs, SITE_URL } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Beginner FAQ",
   description:
     "Fact-checked My Toll Farm answers about saving, money, car placement, upgrades, Rebirth, removing cars, offline income, and codes.",
-  alternates: { canonical: "/faq" },
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

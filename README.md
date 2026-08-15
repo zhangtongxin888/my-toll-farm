@@ -21,9 +21,10 @@ npm run lint
 npm test
 ```
 
-The production build is Cloudflare Worker compatible. A release can be prepared
-with `npm run deploy:cloudflare` after the Cloudflare project is connected to
-this repository.
+The production build is Cloudflare Worker compatible. `wrangler.jsonc` is the
+versioned production configuration; a release can be prepared with
+`npm run deploy:cloudflare` after the Cloudflare project is connected to this
+repository.
 
 Sites is used only as a design preview. The independent GitHub repository is
 the long-term source for the production deployment.

@@ -7,13 +7,14 @@ import {
   VerificationNote,
 } from "../components/GuideElements";
 import { coreLoop, upgrades } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Core Gameplay Loop",
   description:
     "Understand the verified My Toll Farm gameplay loop: roll cars, place them, earn during active traffic, expand capacity, upgrade, and Rebirth.",
-  alternates: { canonical: "/gameplay" },
-};
+  path: "/gameplay",
+});
 
 export default function GameplayPage() {
   return (

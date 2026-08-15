@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { ArticleNav, PageHero, Tip } from "../components/GuideElements";
 import { mistakes } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Common Beginner Mistakes",
   description:
     "Avoid six My Toll Farm beginner mistakes involving placement capacity, Rebirth, Delete, stale prices, offline income assumptions, and promo numbers.",
-  alternates: { canonical: "/mistakes" },
-};
+  path: "/mistakes",
+});
 
 export default function MistakesPage() {
   return (

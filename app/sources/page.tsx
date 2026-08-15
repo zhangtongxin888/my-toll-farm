@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Tip } from "../components/GuideElements";
 import { GAME_URL, VERIFIED_DATE } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Sources & Verification",
   description:
     "See how My Toll Farm gameplay facts were checked against official Roblox data, approved artwork, and public gameplay, plus the claims this guide does not make.",
-  alternates: { canonical: "/sources" },
-};
+  path: "/sources",
+});
 
 const sources = [
   {

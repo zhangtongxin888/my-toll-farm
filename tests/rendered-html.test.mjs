@@ -26,6 +26,8 @@ test("renders a beginner-first production homepage", async () => {
   const response = await request();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("x-frame-options"), "SAMEORIGIN");
 
   const html = await response.text();
   assert.match(html, /Build your first/);
@@ -55,6 +57,11 @@ test("renders every public guide route", async () => {
     assert.equal(response.status, 200, path);
     const html = await response.text();
     assert.match(html, new RegExp(copy, "i"), path);
+    assert.match(
+      html,
+      new RegExp(`property="og:url"[^>]+mytollfarmgame\\.wiki${path}`, "i"),
+      `${path} has route-specific social metadata`,
+    );
     assert.match(html, new RegExp(`canonical[^>]+mytollfarmgame\\.wiki${path}`, "i"), path);
   }
 });

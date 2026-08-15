@@ -6,13 +6,14 @@ import {
   VerificationNote,
 } from "../components/GuideElements";
 import { progressionStages } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Progression Guide",
   description:
     "A practical My Toll Farm progression route for placement capacity, toll lines, traffic, car speed, spawn speed, Roll Luck, Roll Size, and Rebirth.",
-  alternates: { canonical: "/progression" },
-};
+  path: "/progression",
+});
 
 export default function ProgressionPage() {
   return (

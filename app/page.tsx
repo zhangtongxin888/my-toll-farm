@@ -60,6 +60,7 @@ export default function Home() {
                 width={767}
                 height={432}
                 priority
+                unoptimized
               />
               <span>Official game artwork</span>
             </div>

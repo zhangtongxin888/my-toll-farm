@@ -8,13 +8,14 @@ import {
   VerificationNote,
 } from "../components/GuideElements";
 import { quickStart, SITE_URL, VERIFIED_DATE_ISO } from "../content";
+import { pageMetadata } from "../metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Beginner Guide",
   description:
     "Start My Toll Farm in the right order: roll a car, place it, build toll income, expand capacity, choose upgrades, and approach Rebirth safely.",
-  alternates: { canonical: "/beginner-guide" },
-};
+  path: "/beginner-guide",
+});
 
 export default function BeginnerGuidePage() {
   return (
