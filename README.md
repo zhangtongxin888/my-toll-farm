@@ -19,12 +19,12 @@ npm run dev
 ```bash
 npm run lint
 npm test
+npm run build:vercel
 ```
 
-The production build is Cloudflare Worker compatible. `wrangler.jsonc` is the
-versioned production configuration; a release can be prepared with
-`npm run deploy:cloudflare` after the Cloudflare project is connected to this
-repository.
+Vercel serves the production domain from this repository. `vercel.json` keeps
+the production Next.js build explicit. The same source also remains Cloudflare
+Worker compatible through the versioned `wrangler.jsonc` configuration.
 
 Sites is used only as a design preview. The independent GitHub repository is
 the long-term source for the production deployment.
