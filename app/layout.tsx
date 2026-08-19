@@ -1,3 +1,4 @@
+import { AdsterraPopunderGate, AdsterraSocialBarGate, AdsterraStickyRail, AdsterraGlobalFallback } from "@/components/ads";
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { JsonLd } from "./components/GuideElements";
@@ -53,6 +54,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <AdsterraPopunderGate />
+        <AdsterraSocialBarGate />
+        <AdsterraStickyRail />
+        <AdsterraGlobalFallback />
         <JsonLd
           data={{
             "@context": "https://schema.org",
