@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="not-found">
+    <section data-adsterra-clean="" className="not-found">
       <div>
         <span>404 · WRONG TURN</span>
         <h1>This road does not reach a guide.</h1>
